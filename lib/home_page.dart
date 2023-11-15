@@ -55,8 +55,8 @@ class _homePageState extends State<homePage> {
         _myStore.put('stores', true);
       }
 
-      _myStore
-          .delete('stores'); //personal flag to reset code to show all tutorials
+      _myStore.delete(
+          'stores'); //personal flag to reset code to show all tutorials. Uncommentto reset tutorail to work
       Future.delayed(const Duration(seconds: 2), () {
         ToDoDatabase().getShowStatus().then((value) {
           if (value == true || (ToDoDatabase().endTutorial() == false)) {
